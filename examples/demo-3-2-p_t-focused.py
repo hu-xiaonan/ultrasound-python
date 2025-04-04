@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     p = get_p_t(
         ula, props, medium, tx_delays, tx_apodization, points, pulse_t, fs,
-        workers=None, show_pbar=True,
+        workers=-1, show_pbar=True,
     )
     p = p.reshape((*x_mesh.shape, -1))
     p_magnitude = np.abs(p)

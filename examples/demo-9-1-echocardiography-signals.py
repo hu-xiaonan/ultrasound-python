@@ -56,7 +56,7 @@ if __name__ == '__main__':
         get_signals_rx_t(
             ula, props, medium, tx_delays, tx_apodization,
             scatterers, reflectivity, pulse_t, fs,
-            workers=None, show_pbar=True,
+            workers=-1, show_pbar=True,
         )
         for tx_delays in tx_delays_arr
     ]
