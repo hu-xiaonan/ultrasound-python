@@ -81,7 +81,7 @@ if __name__ == '__main__':
         signals_rx_t = get_signals_rx_t(
             ula, props, medium, tx_delays, tx_apodization,
             scatterers, reflectivity, pulse_t, fs,
-            db_thresh=-6, workers=None,
+            db_thresh=-6, workers=None, show_pbar=True,
         )
         iq_t = rf2iq(signals_rx_t, fc, fs)
         beamformed = beamform(ula, medium, tx_delays, iq_t, fs, points, fnumber, fc)

@@ -54,17 +54,17 @@ if __name__ == '__main__':
         get_signals_rx_t(
             ula, props, medium, tx_delays, tx_apodization,
             scatterers, reflectivity, pulse_t, fs,
-            workers=None,
+            workers=None, show_pbar=True,
         ),
         get_signals_rx_t(
             ula, props, medium, tx_delays, tx_apodization,
             scatterers, reflectivity, pulse_t, fs,
-            db_thresh=-40, workers=None,
+            db_thresh=-40, workers=None, show_pbar=True,
         ),
         get_signals_rx_t(
             ula, props, medium, tx_delays, tx_apodization,
             scatterers, reflectivity, pulse_t, fs,
-            db_thresh=-6, workers=None,
+            db_thresh=-6, workers=None, show_pbar=True,
         ),
     ]
     iq = [rf2iq(rf, fc, fs) for rf in signals_rx_t]

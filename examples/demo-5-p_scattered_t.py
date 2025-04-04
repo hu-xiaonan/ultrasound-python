@@ -40,12 +40,12 @@ if __name__ == '__main__':
 
     p_primary = get_p_t(
         ula, props, medium, tx_delays, tx_apodization, points, pulse_t, fs,
-        workers=None,
+        workers=None, show_pbar=True,
     )
     p_scattered = get_p_scattered_t(
         ula, props, medium, tx_delays, tx_apodization, points,
         scatterers, 1e-3, pulse_t, fs,
-        workers=None,
+        workers=None, show_pbar=True,
     )
     p = p_primary + p_scattered
     p = p.reshape((*x_mesh.shape, -1))

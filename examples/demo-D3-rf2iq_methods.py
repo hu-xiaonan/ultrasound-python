@@ -56,7 +56,7 @@ if __name__ == '__main__':
     signals_rx_t = get_signals_rx_t(
         ula, props, medium, tx_delays, tx_apodization,
         scatterers, reflectivity, pulse_t, fs,
-        workers=None,
+        workers=None, show_pbar=True,
     )
 
     # 5x-undersampled RF signals.
