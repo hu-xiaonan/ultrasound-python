@@ -1,3 +1,6 @@
+# Copyright (c) 2023-2025 Hu Xiaonan
+# License: MIT License
+
 from time import perf_counter
 import math
 import os

@@ -1,3 +1,6 @@
+# Copyright (c) 2023-2025 Hu Xiaonan
+# License: MIT License
+
 import os
 import sys
 from pathlib import Path
