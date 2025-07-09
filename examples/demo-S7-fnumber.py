@@ -38,7 +38,6 @@ if __name__ == '__main__':
     fnumber = get_fnumber(ula.width, medium.c/(fc*(1+bandwidth/2)))
     n_samples = 2048
     fs = 10e6
-    time = np.linspace(0, n_samples/fs, n_samples)
     pulse_t = get_tx_pulse_t(n_samples, fs, fc, bandwidth)
 
     x = np.linspace(-4e-2, 4e-2, 400+1)
@@ -88,8 +87,8 @@ if __name__ == '__main__':
         extent=(x[0]*100, x[-1]*100, z[-1]*100, z[0]*100),
     )
     for ax in axs:
-        axs[1].set_xlabel('$x$ (cm)')
-        axs[1].set_ylabel('$z$ (cm)')
-        for spine in axs[1].spines.values():
+        ax.set_xlabel('$x$ (cm)')
+        ax.set_ylabel('$z$ (cm)')
+        for spine in ax.spines.values():
             spine.set_visible(False)
     fig.savefig('fig-S7-fnumber.png', dpi=300)
